@@ -102,9 +102,9 @@ def depthFirstSearch(problem):
             if problem.isGoalState(node):
                 return actions
             for successor in problem.getSuccessors(node):
-                nextNode, action, stepCost = successor
+                nextState, action, stepCost = successor
                 nextActions = actions + [action]
-                fringe.push((nextNode, nextActions))
+                fringe.push((nextState, nextActions))
     return []
 
 def breadthFirstSearch(problem):
